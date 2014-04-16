@@ -20,7 +20,7 @@ $ cd bowerz
 $ npm install
 ```
 
-Note, before you run the bower task, there is no public/templates or locales/**/**/templates directories. The task will create these per what it finds in the "matt" component.
+Note, before you run the bower task, there is no public/templates or locales/\*\*/\*\*/templates directories. The task will create these per what it finds in the "matt" component.
 
 ```shell
 $ grunt bower
