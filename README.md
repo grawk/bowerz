@@ -26,6 +26,8 @@ Note, before you run the bower task, there is no public/templates or locales/\*\
 $ grunt bower
 ```
 
+After running the task, we have copied the files: matt.dust, joni.dust, matt.properties, joni.properties to the appropriate directories
+
 ## Changes
 
 To achieve this, add the grunt-bower-task to the project:
