@@ -1,0 +1,30 @@
+{
+    "middleware": {
+
+        "devtools": {
+            "enabled": true,
+            "priority": 35,
+            "module": "kraken-devtools",
+            "arguments": [
+                "path:./public",
+                "path:./.build",
+                {   
+                    "template": {
+                        "module": "kraken-devtools/plugins/dustjs",
+                        "files": "/templates/**/*.js",
+                        "base": "templates"
+                    },
+                    "css": {
+                        "module": "kraken-devtools/plugins/less",
+                        "files": "/css/**/*.css"
+                    },
+                    "copier": {
+                        "module": "kraken-devtools/plugins/copier",
+                        "files": "**/*"
+                    }
+                }
+            ]
+        }
+
+    }
+}
