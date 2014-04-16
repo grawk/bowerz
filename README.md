@@ -6,7 +6,7 @@ test bower components in kraken 1.0
 
 Expect bower components which (for component named matt):
 * has single layer template directory: matt/templates/\*.dust
-* one or more locale based directory endpoints matt/locales/{CC}/{lc}/\*.properties where CC=country \* code and lc=language code
+* one or more locale based directory endpoints matt/locales/{CC}/{lc}/\*.properties where CC=country code and lc=language code
 
 grunt-bower-task layout needs to:
 * copy matt/templates/\*.dust -> public/templates/components/matt/\*.dust
