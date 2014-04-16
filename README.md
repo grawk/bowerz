@@ -14,12 +14,12 @@ $ grunt bower
 ## Requirements
 
 Expect bower components which (for component named matt):
-* has single layer template directory: matt/templates/*.dust
-* one or more locale based directory endpoints matt/locales/{CC}/{lc}/*.properties where CC=country * code and lc=language code
+* has single layer template directory: matt/templates/\*.dust
+* one or more locale based directory endpoints matt/locales/{CC}/{lc}/\*.properties where CC=country \* code and lc=language code
 
 grunt-bower-task layout needs to:
-* copy matt/templates/*.dust -> public/templates/components/matt/*.dust
-* copy matt/locales/{CC}/{lc}/*.properties -> locales/{CC}/{lc}/components/matt/*.properties
+* copy matt/templates/\*.dust -> public/templates/components/matt/\*.dust
+* copy matt/locales/{CC}/{lc}/\*.properties -> locales/{CC}/{lc}/components/matt/\*.properties
 
 To achieve this, add the grunt-bower-task to the project:
 
