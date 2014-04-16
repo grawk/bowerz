@@ -2,15 +2,24 @@
 
 test bower components in kraken 1.0
 
+## Install app and run grunt bower task
+
+```shell
+$ git clone <this repo>
+$ cd bowerz
+$ npm install
+$ grunt bower
+```
+
 ## Requirements
 
 Expect bower components which (for component named matt):
-* expect single directory with all templates: matt/templates/*.dust
-* expect one or more locale based directory endpoint matt/locales/{CC}/{lc}/*.properties where CC=country * code and lc=language code
+* has single layer template directory: matt/templates/*.dust
+* one or more locale based directory endpoints matt/locales/{CC}/{lc}/*.properties where CC=country * code and lc=language code
 
 grunt-bower-task layout needs to:
 * copy matt/templates/*.dust -> public/templates/components/matt/*.dust
-* copy matt/locales/{CC}/{lc}/*.properties -> locales/{CC}/{lc}/matt/*.properties
+* copy matt/locales/{CC}/{lc}/*.properties -> locales/{CC}/{lc}/components/matt/*.properties
 
 To achieve this, add the grunt-bower-task to the project:
 
@@ -18,8 +27,7 @@ package.json
 ```javascript
 "grunt-bower-task": "git://github.com/grawk/grunt-bower-task#devel"
 ```
-
-_Please see the pull request opened against grunt-bower-task: https://github.com/yatskevich/grunt-bower-task/pull/114 _
+See the pull request opened against grunt-bower-task: https://github.com/yatskevich/grunt-bower-task/pull/114
 
 Add a "bower.js" file to the tasks directory, with a custom layout function (see entire tasks/bower.js file)
 
