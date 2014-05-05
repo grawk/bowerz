@@ -33,7 +33,8 @@
     "grunt-localizr": "~0.1.0",
     "grunt-mocha-cli": "~1.8.0",
     "grunt-contrib-less": "~0.9.0",
-    "grunt-bower-task": "git://github.com/grawk/grunt-bower-task#devel"
+    "grunt-bower-task": "git://github.com/grawk/grunt-bower-task#devel",
+    "grunt-contrib-symlink": "git://github.com/grawk/grunt-contrib-symlink#master"
   },
   "generator-kraken": {
     "version": "1.0.0-beta.3",

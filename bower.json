@@ -17,11 +17,5 @@
 	],
 	"dependencies": {
 		"matt": "~0.0.7"
-	},
-	"exportsOverride": {
-		"*": {
-			"dust": "templates/*.dust",
-			"properties": "locales/**/*.properties"
-		}
 	}
 }

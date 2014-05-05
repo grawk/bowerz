@@ -2,4 +2,9 @@
 .idea/
 .build/
 node_modules/
+locales/*/*/components
+locales/DE
+public/components
+public/templates/components
+*.log
 *.iml
