@@ -43,27 +43,27 @@ Add a "symlink.js" file to the tasks directory, excerpted below:
 
 ```javascript
 return {
-	options: {
-		overwrite: true
-	},
-	expanded: {
-		files: [{
-			expand: true,
-			overwrite: true,
-			flatten: false,
-			cwd: 'pusblic/components',
-			src: ['*/*/*.dust'],
-			regex: /(public\/components)(\/.+)(\/templates)(\/.+dust)/g,
-			backreference: 'public/templates/components$2$4'
-		}, {
-			expand: true,
-			overwrite: true,
-			flatten: false,
-			cwd: 'public/components/',
-			src: ['*/*/*/*/*.properties'],
-			regex: /(public\/components)(\/.+)(\/locales)(\/[A-Z]{2}\/[a-z]{2})(\/.+properties)/g,
-			backreference: 'locales$4/components$2$5'
-		}]
-	}
+options: {
+	overwrite: true
+},
+expanded: {
+	files: [{
+		expand: true,
+		overwrite: true,
+		flatten: false,
+		cwd: 'public/components',
+		src: ['*/*/*.dust'],
+		regex: /(public\/components)(\/.+)(\/templates)(\/.+dust)/g,
+		backreference: 'public/templates/components$2$4'
+	}, {
+		expand: true,
+		overwrite: true,
+		flatten: false,
+		cwd: 'public/components/',
+		src: ['*/*/*/*/*.properties'],
+		regex: /(public\/components)(\/.+)(\/locales)(\/[A-Z]{2}\/[a-z]{2})(\/.+properties)/g,
+		backreference: 'locales$4/components$2$5'
+	}]
+}
 }
 ```

@@ -15,7 +15,7 @@ module.exports = function bower(grunt) {
 				expand: true,
 				overwrite: true,
 				flatten: false,
-				cwd: 'pusblic/components',
+				cwd: 'public/components',
 				src: ['*/*/*.dust'],
 				regex: /(public\/components)(\/.+)(\/templates)(\/.+dust)/g,
 				backreference: 'public/templates/components$2$4'
