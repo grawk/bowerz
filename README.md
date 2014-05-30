@@ -35,9 +35,8 @@ To achieve this, add the grunt-contrib-symlink task to the project:
 
 package.json
 ```javascript
-"grunt-contrib-symlink": "git://github.com/grawk/grunt-contrib-symlink#master"
+"grunt-contrib-symlink": "~0.3.0"
 ```
-TODO: open pull request to grunt-contrib-symlink
 
 Add a "symlink.js" file to the tasks directory, excerpted below:
 
@@ -52,17 +51,20 @@ expanded: {
 		overwrite: true,
 		flatten: false,
 		cwd: 'public/components',
-		src: ['*/*/*.dust'],
-		regex: /(public\/components)(\/.+)(\/templates)(\/.+dust)/g,
-		backreference: 'public/templates/components$2$4'
+		rename: function rename(_dest, src) {
+			var dest = src.replace(/(.+)(\/templates)(\/.+dust)/g, 'public/templates/components/$1$3');
+			return dest;
+		}
 	}, {
 		expand: true,
 		overwrite: true,
 		flatten: false,
 		cwd: 'public/components/',
 		src: ['*/*/*/*/*.properties'],
-		regex: /(public\/components)(\/.+)(\/locales)(\/[A-Z]{2}\/[a-z]{2})(\/.+properties)/g,
-		backreference: 'locales$4/components$2$5'
+		rename: function rename (_dest, src) {
+			var dest = src.replace(/(.+)(\/locales)(\/[A-Z]{2}\/[a-z]{2})(\/.+properties)/g, 'locales$3/components/$1$4');
+			return dest;
+		}
 	}]
 }
 }

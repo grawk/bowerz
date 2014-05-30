@@ -17,9 +17,8 @@ module.exports = function bower(grunt) {
 				flatten: false,
 				cwd: 'public/components',
 				src: ['*/*/*.dust'],
-				rename: function(_dest, src) {
+				rename: function rename(_dest, src) {
 					var dest = src.replace(/(.+)(\/templates)(\/.+dust)/g, 'public/templates/components/$1$3');
-					//console.log("comps dest/src", dest, src);
 					return dest;
 				}
 			}, {
@@ -28,9 +27,8 @@ module.exports = function bower(grunt) {
 				flatten: false,
 				cwd: 'public/components/',
 				src: ['*/*/*/*/*.properties'],
-				rename: function (dest, src) {
+				rename: function rename(_dest, src) {
 					var dest = src.replace(/(.+)(\/locales)(\/[A-Z]{2}\/[a-z]{2})(\/.+properties)/g, 'locales$3/components/$1$4');
-					//console.log("props dest/src", dest, src);
 					return dest;
 				}
 			}]
