@@ -17,16 +17,22 @@ module.exports = function bower(grunt) {
 				flatten: false,
 				cwd: 'public/components',
 				src: ['*/*/*.dust'],
-				regex: /(public\/components)(\/.+)(\/templates)(\/.+dust)/g,
-				backreference: 'public/templates/components$2$4'
+				rename: function(_dest, src) {
+					var dest = src.replace(/(.+)(\/templates)(\/.+dust)/g, 'public/templates/components/$1$3');
+					//console.log("comps dest/src", dest, src);
+					return dest;
+				}
 			}, {
 				expand: true,
 				overwrite: true,
 				flatten: false,
 				cwd: 'public/components/',
 				src: ['*/*/*/*/*.properties'],
-				regex: /(public\/components)(\/.+)(\/locales)(\/[A-Z]{2}\/[a-z]{2})(\/.+properties)/g,
-				backreference: 'locales$4/components$2$5'
+				rename: function (dest, src) {
+					var dest = src.replace(/(.+)(\/locales)(\/[A-Z]{2}\/[a-z]{2})(\/.+properties)/g, 'locales$3/components/$1$4');
+					//console.log("props dest/src", dest, src);
+					return dest;
+				}
 			}]
 		}
 	};

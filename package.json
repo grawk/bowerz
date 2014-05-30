@@ -34,7 +34,7 @@
 		"grunt-contrib-jshint": "~0.10.0",
 		"grunt-contrib-less": "~0.9.0",
 		"grunt-bower-task": "git://github.com/grawk/grunt-bower-task#devel",
-		"grunt-contrib-symlink": "git://github.com/grawk/grunt-contrib-symlink#master"
+		"grunt-contrib-symlink": "~0.3.0"
 	},
 	"generator-kraken": {
 		"version": "1.0.0-rc.2",
